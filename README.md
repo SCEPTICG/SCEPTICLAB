@@ -21,8 +21,8 @@ What the project does, phase by phase. Ticked items are done; the rest is the ro
 - [x] Guided assistant for the Proxmox connection, reused from v1
 - [x] Fetch the kubeconfig to the control machine
 - [x] **Add node** — provision another VM and join it to the cluster as a worker
-- [ ] Networking — MetalLB + Traefik
-- [ ] GitOps with ArgoCD
+- [x] Networking — MetalLB + Traefik
+- [x] GitOps with ArgoCD
 - [ ] Storage — Longhorn + NFS from the NAS
 - [ ] Secrets — Sealed Secrets
 - [ ] TLS + DNS — cert-manager + external-dns
@@ -34,6 +34,8 @@ What the project does, phase by phase. Ticked items are done; the rest is the ro
 
 - **v0.1-beta** — first single-node k3s cluster created end to end from the menu.
 - **v0.2-beta** — worker nodes join the cluster, one at a time, each with its own hostname.
+- **v0.3-beta** — networking layer: MetalLB (L2) hands out LAN IPs and Traefik fronts the cluster as the single ingress.
+- **v0.4-beta** — GitOps with ArgoCD: the Git repo becomes the source of truth, adopting the existing networking layer with an app-of-apps.
 
 ## Background
 
